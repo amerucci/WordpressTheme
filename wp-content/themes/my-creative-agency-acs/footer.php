@@ -1,19 +1,37 @@
 
-<?php
-if ( has_nav_menu( 'footer-menu' ) ) : ?>
-<?php
-wp_nav_menu ( array (
-'theme_location' => 'footer-menu' ,
-'container'      => 'nav',
-'menu_class'     => 'right no-bullets no-margin',
-) ); ?>
-<?php endif;
-?>
+    <footer>
+        <div class="container flex">
+            <div class="copyright">© 2020 ACS LONS – All Right Reserved</div>
+            <div class="author">Designed by ACSL</div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.js-scrollTo').on('click', function () { // Au clic sur un élément
+                var section = $(this).attr('href'); // Section cible
+                var speed = 750; // Durée de l'animation (en ms)
+                $('html, body').animate({
+                    scrollTop: $(section).offset().top
+                }, speed); // Go
+                return false;
+            });
+        });
 
 
+        document.getElementById("burger-menu").addEventListener("click", (event) => {
+            if (event.currentTarget.classList.contains("open")) {
+                event.currentTarget.classList.remove("open");
+                document.getElementById("menuresp").classList.remove("menurespopen");
+              
+            } else {
+                event.currentTarget.classList.add("open");
+                document.getElementById("menuresp").classList.add("menurespopen");
+            }
+        });
+    </script>
 
+</body>
 
-    
-  
-
-</body></html>
+</html>
