@@ -1,5 +1,6 @@
 <?php
 
+
 function mesMenusWordpress()
 {
     register_nav_menus(
@@ -63,3 +64,6 @@ function custom_post_type_projets() {
 }
 
 add_action( 'init', 'custom_post_type_projets', 0 );
+
+
+	

@@ -15,12 +15,14 @@
 
 <body>
 
+<?php echo wp_site_icon(); ?>
+<?php get_site_icon_url(); ?>
 
 
     <header>
         <div class="navbar flex ">
             <div class="container flexheader ">
-                <div class="logo"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="logo"></a></div>
+                <div class="logo"><a href="#"><img src="<?php echo get_site_icon_url(); ?> " width="79" alt="logo"></a></div>
                 <?php
                 if (has_nav_menu('header-menu')) : ?>
                     <?php
