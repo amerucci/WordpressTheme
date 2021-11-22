@@ -1,3 +1,8 @@
+<style>
+    .navbar{
+        background: #222;
+    }
+</style>
 <?php
 
 include("header.php");
