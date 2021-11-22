@@ -138,18 +138,11 @@ echo '<a href="' . get_the_permalink() . '" style="text-decoration:none;color:in
 
 <section id="prefooter">
     <div class="container flex">
-        <div class="col50">
-            <div class="colo50img"><img src="img/write-footer.png" alt="writefooter"></div>
-            <div class="colo50txt">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-                mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Vivamus sagittis
-                lacus vel augue laoreet rutrum faucibus dolor auctor.</div>
-        </div>
-        <div class="col50">
-            <div class="colo50img"><img src="img/write-footer.png" alt="writefooter"></div>
-            <div class="colo50txt">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-                mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Vivamus sagittis
-                lacus vel augue laoreet rutrum faucibus dolor auctor.</div>
-        </div>
+    
+            <?php dynamic_sidebar('[pre-footer-gauche]') ?>
+            <?php dynamic_sidebar('[pre-footer-droit]') ?>
+         
+        
     </div>
 </section>
 

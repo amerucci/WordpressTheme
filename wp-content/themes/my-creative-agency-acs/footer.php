@@ -1,8 +1,8 @@
 
     <footer>
         <div class="container flex">
-            <div class="copyright">© 2020 ACS LONS – All Right Reserved</div>
-            <div class="author">Designed by ACSL</div>
+            <div class="copyright"> <?php dynamic_sidebar('[copyright]') ?></div>
+            <div class="author"> <?php dynamic_sidebar('[author]') ?></div>
         </div>
     </footer>
 
