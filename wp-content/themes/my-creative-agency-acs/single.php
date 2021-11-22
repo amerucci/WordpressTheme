@@ -31,9 +31,11 @@ include("header.php");
         }
         ?>
     </div>
-    <div class="post-comments">
-<?php comments_template(); ?>
+
 </div>
+
+<div class="post-comments">
+<?php comments_template(); ?>
 </div>
 
 <?php
