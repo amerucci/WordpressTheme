@@ -7,7 +7,8 @@ include('header.php');
 
 <style>
     .center {
-        background: url(<?php echo get_field('image_de_fond'); ?>);
+        background: url(<?php echo get_field('image_de_fond');
+        ?>);
         background-size: cover;
         background-position: center;
     }
@@ -56,7 +57,7 @@ include('header.php');
 
 
 
-        <?php
+    <?php
 
 
 
@@ -93,41 +94,42 @@ include('header.php');
             <div class="titre"><?php echo get_field('titre_blog'); ?></div>
         </div>
         <div class="accroche"><?php echo get_field('accroche_blog'); ?></div>
-       
+
         <?php $loop = new WP_Query(array('post_type' => 'post', 'posts_per_page' => '4', 'order' => 'DESC')); ?>
-    <?php if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post(); 
-     $image =  get_field('images');
-     ?>
+        <?php if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post();
+                $image =  get_field('images');
+        ?>
 
 
         <div class="bloc">
             <div class="imgblog">
-           
 
-            <?php 
 
-echo '<a href="' . get_the_permalink() . '" style="text-decoration:none;color:initial;height: 100%;width: 100%;">
+                <?php
+
+                        echo '<a href="' . get_the_permalink() . '" style="text-decoration:none;color:initial;height: 100%;width: 100%;">
 <img src="' . $image[0]['image_projet'] . '">
 </a>';
 
-            ?>
-                
+                        ?>
+
             </div>
 
             <h2><?php the_title(); ?></h2>
-            <p><?php $content = get_the_content(); echo mb_strimwidth($content, 0, 150, '...');?></p>
+            <p><?php $content = get_the_content();
+                        echo mb_strimwidth($content, 0, 150, '...'); ?></p>
         </div>
-        
 
 
-            <?php endwhile;
+
+        <?php endwhile;
         else : ?>
-            <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+        <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
         <?php endif; ?>
 
 
 
-      
+
 
 
 
@@ -138,11 +140,11 @@ echo '<a href="' . get_the_permalink() . '" style="text-decoration:none;color:in
 
 <section id="prefooter">
     <div class="container flex">
-    
-            <?php dynamic_sidebar('[pre-footer-gauche]') ?>
-            <?php dynamic_sidebar('[pre-footer-droit]') ?>
-         
-        
+
+        <?php dynamic_sidebar('[pre-footer-gauche]') ?>
+        <?php dynamic_sidebar('[pre-footer-droit]') ?>
+
+
     </div>
 </section>
 

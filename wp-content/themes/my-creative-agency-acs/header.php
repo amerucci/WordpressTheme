@@ -15,8 +15,6 @@
 
 <body>
 
-<?php echo wp_site_icon(); ?>
-<?php get_site_icon_url(); ?>
 
 
     <header>
