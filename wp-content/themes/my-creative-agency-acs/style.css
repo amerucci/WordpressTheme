@@ -654,7 +654,30 @@ footer .flex {
     margin-bottom: 50px;
 }
 
+/************************ PAGE ************************/
 
+.pagetitleh1{
+    padding: 0;
+    margin: 50px 0;
+    text-transform: uppercase;
+    font-family: 'gothambold';
+    color: #d21242;
+    font-size: 8vw;
+    width: 100%;
+    text-align: center;
+}
+
+.content {
+    margin-bottom: 50px;
+}
+
+/************************ SECTION COMMENTRAIRES ************************/
+
+h3#comments {
+    text-transform: uppercase;
+    font-family: 'gothambold';
+    color: #d21242;
+}
 
 /* MEDIAS QUERIES */
 
