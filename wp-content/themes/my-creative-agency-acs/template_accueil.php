@@ -66,9 +66,9 @@ include('header.php');
         echo '
 <div class="line">
 <div class="colline colleft">
-    <h3 class="titrecol">' . get_the_title() . '</h3>
-    <p>' . get_the_content() . '</p>
-</div>
+    <h3 class="titrecol">' . get_the_title() . '</h3>';
+   $content = get_the_content();
+                        echo '<p>'. mb_strimwidth($content, 0, 700, '...').'</p></div>
 <div class="colline">
 <a href="' . get_the_permalink() . '" style="text-decoration:none;color:initial;height: 100%;width: 100%;">
 <img src="' . $image[0]['image_projet'] . '">
@@ -138,15 +138,6 @@ include('header.php');
     </div>
 </section>
 
-<section id="prefooter">
-    <div class="container flex">
-
-        <?php dynamic_sidebar('[pre-footer-gauche]') ?>
-        <?php dynamic_sidebar('[pre-footer-droit]') ?>
-
-
-    </div>
-</section>
 
 
 

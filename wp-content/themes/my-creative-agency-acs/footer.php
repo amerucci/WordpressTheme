@@ -1,4 +1,13 @@
 
+<section id="prefooter">
+    <div class="container flex">
+
+        <?php dynamic_sidebar('[pre-footer-gauche]') ?>
+        <?php dynamic_sidebar('[pre-footer-droit]') ?>
+
+
+    </div>
+</section>
     <footer>
         <div class="container flex">
             <div class="copyright"> <?php dynamic_sidebar('[copyright]') ?></div>
